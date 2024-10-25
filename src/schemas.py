@@ -8,8 +8,8 @@ class RecipeOut(BaseModel):
     cooking_time: int
     views: int | None
 
-    class Config:
-        from_attributes = True
+    # class Config:
+    #     from_attributes = True
 
 
 class Ingredients(BaseModel):

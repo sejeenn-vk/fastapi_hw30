@@ -1,3 +1,4 @@
+import asyncio
 from typing import List
 import uvicorn
 from fastapi import FastAPI
@@ -5,6 +6,7 @@ from fastapi import FastAPI
 import models
 from schemas import RecipeOut, RecipeDetail, RecipeIn
 from database import select_all_recipes, get_detail_recipe, add_new_recipe, add_new_data
+
 
 app = FastAPI()
 

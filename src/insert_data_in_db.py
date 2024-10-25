@@ -1,6 +1,6 @@
 import asyncio
 from models import Recipe, Ingredient, IngredientsInRecipe, Base
-from database import engine, add_new_data
+from src.database import engine, add_new_data
 
 several_recipes = [
     Recipe(
