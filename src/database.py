@@ -1,12 +1,13 @@
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy import select
-from models import Recipe, Ingredient, IngredientsInRecipe
+from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+
+from src.models import Ingredient, IngredientsInRecipe, Recipe
 
 engine = create_async_engine("sqlite+aiosqlite:///./app.db")
 async_session = async_sessionmaker(engine, expire_on_commit=False)
 
 
-async def select_all_recipes():
+async def all_recipes():
     """
     Функция получения всех рецептов из базы данных с сортировкой
     по количеству просмотров, а если просмотры одинаковы, то по времени
@@ -22,7 +23,7 @@ async def select_all_recipes():
         return result
 
 
-async def get_detail_recipe(recipe_id: int):
+async def detail_recipe(recipe_id: int):
     """
     Функция получения детальной информации о рецепте. Которая включает в себя:
     - id
@@ -34,7 +35,9 @@ async def get_detail_recipe(recipe_id: int):
     :return:
     """
     async with async_session() as session:
-        result = await session.execute(select(Recipe).filter(Recipe.id == recipe_id))
+        result = await session.execute(
+            select(Recipe).filter(Recipe.id == recipe_id)
+        )
 
         result_2 = await session.execute(
             select(
@@ -42,7 +45,9 @@ async def get_detail_recipe(recipe_id: int):
                 Ingredient.ingredient_name,
                 Ingredient.ingredient_description,
             )
-            .join(Ingredient, Ingredient.id == IngredientsInRecipe.ingredient_id)
+            .join(
+                Ingredient, Ingredient.id == IngredientsInRecipe.ingredient_id
+            )
             .where(IngredientsInRecipe.recipe_id == recipe_id)
         )
 
@@ -72,7 +77,7 @@ async def get_detail_recipe(recipe_id: int):
         return recipe_with_ingredients
 
 
-async def add_new_data(*objs):
+async def add_data(*objs):
     """
     Функция наполнения базы данных. Вставляются объекты рецептов, ингредиентов
     или связей рецептов с ингредиентами.
@@ -84,7 +89,7 @@ async def add_new_data(*objs):
             session.add_all(*objs)
 
 
-async def add_new_recipe(new_recipe):
+async def add_recipe(new_recipe):
     """
     Функция создания нового рецепта. Принимает объект рецепта и возвращает
     полученный при его создании id

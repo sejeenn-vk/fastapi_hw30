@@ -1,4 +1,3 @@
-import asyncio
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
@@ -37,4 +36,11 @@ async def async_db(async_db_engine):
         autoflush=False,
         # bind=async_db_engine,
         # class_=AsyncSession,
-        )
+    )
+
+
+@pytest.fixture
+async def client():
+    # Создание тестового клиента
+    async with AsyncClient(app=app, base_url="http://test") as ac:
+        yield ac
