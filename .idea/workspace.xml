@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3c8d6b5-a1f5-4209-8144-d5c137e1bd3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/module_30.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+    <list default="true" id="e3c8d6b5-a1f5-4209-8144-d5c137e1bd3a" name="Changes" comment="update module_30.yaml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_for_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_for_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/insert_data_in_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/insert_data_in_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -215,9 +211,38 @@
       <option name="presentableId" value="Default" />
       <updated>1729791518438</updated>
     </task>
+    <task id="LOCAL-00001" summary="25.10.24 home">
+      <option name="closed" value="true" />
+      <created>1729884667187</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884667187</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update requirements.txt">
+      <option name="closed" value="true" />
+      <created>1729884739347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884739347</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update module_30.yaml">
+      <option name="closed" value="true" />
+      <created>1729884820403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884820403</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="25.10.24 home" />
+    <MESSAGE value="update requirements.txt" />
+    <MESSAGE value="update module_30.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update module_30.yaml" />
   </component>
 </project>
